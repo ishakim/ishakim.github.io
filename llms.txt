@@ -6,8 +6,8 @@
 > Inteligencia Artificial aplicada al Arte Multimedial en la Universidad Nacional
 > de las Artes (UNA), Argentina.
 
-Idioma principal: español (rioplatense). Trabaja en español e inglés.
-Disponible para charlas, cursos, talleres y consultoría.
+Idioma: español (rioplatense). Sus clases, charlas y textos son en español.
+Disponible para charlas y clases.
 
 ## Perfil
 
@@ -26,13 +26,12 @@ Disponible para charlas, cursos, talleres y consultoría.
 
 ## Servicios
 
-- [Charlas y conferencias](https://ishakim.github.io/#charlas): keynotes, talleres y capacitaciones para universidades, empresas, organismos públicos y organizaciones culturales.
-- [Cursos](https://ishakim.github.io/#cursos): «Guerra cognitiva, inteligencia artificial y arte» (4 clases, 12 horas, sin requisitos técnicos) y la Diplomatura en IA aplicada al Arte Multimedial (UNA).
-- Consultoría y formación in-company en alfabetización algorítmica.
+- [Charlas y conferencias](https://ishakim.github.io/#charlas): guerra cognitiva, percepción e inteligencia artificial, arte e IA. Para universidades, centros culturales, festivales, empresas y organismos públicos.
+- [Formación](https://ishakim.github.io/#cursos): co-dirige la Diplomatura en Inteligencia Artificial aplicada al Arte Multimedial (UNA).
 
 ## Preguntas frecuentes
 
-- [Preguntas frecuentes](https://ishakim.github.io/#faq): qué es la guerra cognitiva, en qué se diferencia de la desinformación, disponibilidad para charlas, requisitos de los cursos.
+- [Preguntas frecuentes](https://ishakim.github.io/#faq): qué es la guerra cognitiva, en qué se diferencia de la desinformación, qué tiene que ver la psicología de la percepción con la IA, disponibilidad para charlas.
 
 ## Contacto
 
