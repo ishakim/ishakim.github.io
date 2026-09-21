@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Isha Kim — guerra cognitiva, percepción e inteligencia artificial</title>
+<meta name="description" content="Isha Kim, psicóloga e investigadora argentina especializada en guerra cognitiva, percepción e inteligencia artificial. Charlas y clases.">
+<link rel="canonical" href="https://ishakim.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Isha Kim — guerra cognitiva, percepción e inteligencia artificial">
+<meta property="og:description" content="Psicóloga, investigadora, docente y artista argentina. Trabaja en el cruce entre percepción, poder y tecnologías digitales.">
+<meta property="og:url" content="https://ishakim.github.io/">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --ground:#E9EAEC; --surface:#FFFFFF; --surface-2:#DFE1E4;
+  --ink:#0E1116; --ink-2:#3C434C; --muted:#6B737D; --line:#CDD0D5;
+  --blue:#1F3A93; --signal:#B83E1B; --signal-soft:#F6E7E1;
+  --serif:"Bodoni Moda", Didot, "Times New Roman", serif;
+  --sans:"Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1116; --surface:#161A20; --surface-2:#1E232B;
+    --ink:#E8E9EC; --ink-2:#B7BCC4; --muted:#868D97; --line:#2A2F37;
+    --blue:#8AA2F5; --signal:#FF8055; --signal-soft:#2A1B15;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1116; --surface:#161A20; --surface-2:#1E232B;
+  --ink:#E8E9EC; --ink-2:#B7BCC4; --muted:#868D97; --line:#2A2F37;
+  --blue:#8AA2F5; --signal:#FF8055; --signal-soft:#2A1B15;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--sans); font-size:16.5px; line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; height:auto; display:block}
+a{color:var(--blue); text-underline-offset:3px; text-decoration-thickness:1px}
+a:focus-visible{outline:2px solid var(--signal); outline-offset:3px}
+p{margin:0 0 15px; max-width:66ch}
+h1,h2,h3{text-wrap:balance}
+
+.shell{max-width:1180px; margin:0 auto; padding:0 28px}
+
+/* ---------- top bar ---------- */
+.bar{border-bottom:1px solid var(--line); background:var(--ground); position:sticky; top:0; z-index:20; backdrop-filter:saturate(1.2) blur(6px)}
+.bar-in{max-width:1180px; margin:0 auto; padding:13px 28px; display:flex; justify-content:space-between; align-items:center; gap:20px}
+.wordmark{font-family:var(--serif); font-size:19px; letter-spacing:.01em; text-decoration:none; color:var(--ink)}
+.bar nav{display:flex; gap:22px; font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase}
+.bar nav a{color:var(--muted); text-decoration:none}
+.bar nav a:hover{color:var(--signal)}
+@media (max-width:760px){ .bar nav{display:none} }
+
+/* ---------- hero ---------- */
+.hero{padding:74px 0 60px; border-bottom:1px solid var(--line)}
+.kicker{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--signal); margin:0 0 26px;
+}
+h1{
+  font-family:var(--serif); font-weight:400; font-size:clamp(3rem,11vw,7.4rem);
+  line-height:.94; letter-spacing:-.015em; margin:0;
+}
+h1 .it{font-style:italic}
+.hero .claim{
+  font-family:var(--serif); font-size:clamp(1.35rem,3.4vw,2rem); line-height:1.3;
+  font-weight:400; margin:30px 0 0; max-width:22ch; color:var(--ink);
+}
+.hero .sub{margin-top:22px; max-width:56ch; color:var(--ink-2); font-size:1.03rem}
+.hero-grid{display:grid; grid-template-columns:1.35fr 1fr; gap:56px; align-items:end}
+@media (max-width:860px){ .hero-grid{grid-template-columns:1fr; gap:34px} .hero{padding:48px 0 44px} }
+
+.facts{display:flex; flex-direction:column; gap:0; border-top:1px solid var(--line)}
+.fact{display:flex; gap:14px; padding:11px 0; border-bottom:1px solid var(--line); align-items:baseline}
+.fact dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); flex:none; width:88px}
+.fact dd{margin:0; font-size:.93rem; color:var(--ink-2)}
+
+/* ---------- sections ---------- */
+section{padding:62px 0; border-bottom:1px solid var(--line)}
+.sec-grid{display:grid; grid-template-columns:200px 1fr; gap:48px; align-items:start}
+@media (max-width:860px){ .sec-grid{grid-template-columns:1fr; gap:20px} section{padding:44px 0} }
+.sec-label{
+  font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); position:sticky; top:76px;
+}
+@media (max-width:860px){ .sec-label{position:static} }
+h2{
+  font-family:var(--serif); font-weight:400; font-size:clamp(1.9rem,4.4vw,2.7rem);
+  line-height:1.1; letter-spacing:-.01em; margin:0 0 22px;
+}
+h3{font-family:var(--sans); font-weight:600; font-size:1.04rem; margin:0 0 7px; letter-spacing:-.005em}
+.lede{font-size:1.1rem; color:var(--ink-2); max-width:60ch}
+
+/* ---------- temas ---------- */
+.temas{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:8px}
+@media (max-width:620px){ .temas{grid-template-columns:1fr} }
+.tema{background:var(--surface); padding:24px 22px}
+.tema .n{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; color:var(--signal)}
+.tema h3{margin:12px 0 8px}
+.tema p{font-size:.93rem; color:var(--ink-2); margin:0}
+
+/* ---------- listas ---------- */
+.stack{display:flex; flex-direction:column; gap:0; margin-top:6px}
+.item{padding:20px 0; border-top:1px solid var(--line)}
+.item:first-child{border-top:0; padding-top:0}
+.item p{font-size:.96rem; color:var(--ink-2); margin:0}
+.item .tag{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:8px}
+
+/* ---------- cursos ---------- */
+.curso{background:var(--surface); border:1px solid var(--line); padding:26px; margin-bottom:16px}
+.curso h3{font-family:var(--serif); font-weight:400; font-size:1.5rem; line-height:1.2; margin-bottom:12px}
+.curso ol{margin:14px 0 0; padding-left:20px; font-size:.94rem; color:var(--ink-2)}
+.curso ol li{margin-bottom:7px; padding-left:4px}
+.curso ol li::marker{font-family:var(--mono); font-size:.85em; color:var(--signal)}
+.curso .meta{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:18px; display:flex; gap:18px; flex-wrap:wrap}
+
+/* ---------- faq ---------- */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  cursor:pointer; padding:16px 0; font-weight:600; font-size:1rem; list-style:none;
+  display:flex; justify-content:space-between; gap:18px; align-items:baseline;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+"; font-family:var(--mono); color:var(--signal); font-size:1.1rem; flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq details > div{padding:0 0 18px; color:var(--ink-2); font-size:.97rem}
+.faq details > div p:last-child{margin-bottom:0}
+
+/* ---------- contacto ---------- */
+.contacto a.mail{
+  font-family:var(--serif); font-size:clamp(1.5rem,4.5vw,2.4rem); text-decoration:none;
+  color:var(--ink); border-bottom:1px solid var(--signal); padding-bottom:3px;
+}
+.contacto a.mail:hover{color:var(--signal)}
+.perfiles{display:flex; flex-wrap:wrap; gap:10px; margin-top:30px}
+.perfiles a{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase;
+  border:1px solid var(--line); padding:8px 14px; text-decoration:none; color:var(--ink-2); background:var(--surface);
+}
+.perfiles a:hover{border-color:var(--signal); color:var(--signal)}
+
+footer{padding:34px 0 60px; font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:var(--muted); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="bar-in">
+    <a class="wordmark" href="/">Isha Kim</a>
+    <nav>
+      <a href="#temas">Temas</a>
+      <a href="#charlas">Charlas</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#publicaciones">Publicaciones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</div>
+
+<main class="shell">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <p class="kicker">Psicóloga · Investigadora · Docente · Artista</p>
+    <div class="hero-grid">
+      <div>
+        <h1>Isha <span class="it">Kim</span></h1>
+        <p class="claim">Cómo la inteligencia artificial reorganiza lo que vemos, lo que creemos y lo que podemos imaginar.</p>
+        <p class="sub">Investigo el cruce entre percepción, poder y tecnologías digitales. Doy clases, escribo y hago obra sobre guerra cognitiva, propaganda automatizada y los sistemas técnicos que hoy disputan la atención.</p>
+      </div>
+      <dl class="facts">
+        <div class="fact"><dt>Base</dt><dd>Buenos Aires, Argentina</dd></div>
+        <div class="fact"><dt>Institución</dt><dd>Universidad Nacional de las Artes (UNA)</dd></div>
+        <div class="fact"><dt>Idioma</dt><dd>Español</dd></div>
+        <div class="fact"><dt>Disponible</dt><dd>Charlas · Clases</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <!-- ============ SOBRE ============ -->
+  <section id="sobre">
+    <div class="sec-grid">
+      <div class="sec-label">01 — Quién soy</div>
+      <div>
+        <h2>Vengo de la psicología, no de la ingeniería</h2>
+        <p class="lede">Isha Kim es psicóloga, investigadora, docente y artista argentina, especializada en guerra cognitiva, percepción e inteligencia artificial.</p>
+        <p>Esa formación cambia la pregunta. La discusión sobre inteligencia artificial suele girar en torno a qué pueden hacer los sistemas. A mí me interesa qué nos hacen: cómo reorganizan la atención, qué vuelven visible y qué dejan afuera del campo, y qué le pasa a un aparato perceptivo humano cuando la imagen deja de ser una representación y pasa a ser una operación.</p>
+        <p>Co-dirijo la <a href="https://multimedia.una.edu.ar/diplomaturas/diplomatura-en-inteligencia-artificial-aplicada-al-arte-multimedial_44987">Diplomatura en Inteligencia Artificial aplicada al Arte Multimedial</a> en la Universidad Nacional de las Artes, donde también soy docente del Departamento de Artes Multimediales. Dicto el curso «Guerra cognitiva, inteligencia artificial y arte», que recorre los orígenes militares de internet, la historia de la propaganda, la memética y los sistemas contemporáneos de vigilancia.</p>
+        <p>Además hago divulgación sobre inteligencia artificial en redes, en español y para público no técnico, porque la alfabetización digital no puede quedar encerrada en la universidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEMAS ============ -->
+  <section id="temas">
+    <div class="sec-grid">
+      <div class="sec-label">02 — Especialización</div>
+      <div>
+        <h2>En qué trabajo</h2>
+        <div class="temas">
+          <div class="tema">
+            <span class="n">01</span>
+            <h3>Guerra cognitiva y propaganda automatizada</h3>
+            <p>De la cibernética militar y ARPANET a los bots, las granjas de contenido y el perfilado. Por qué la disputa por la atención se volvió un dominio de guerra con doctrina propia.</p>
+          </div>
+          <div class="tema">
+            <span class="n">02</span>
+            <h3>Percepción e inteligencia artificial</h3>
+            <p>Qué le pasa al aparato perceptivo humano frente a sistemas que ven por nosotros. Sesgos, imagen operativa, automatización de la mirada.</p>
+          </div>
+          <div class="tema">
+            <span class="n">03</span>
+            <h3>Memética y mutación de la imagen</h3>
+            <p>Cómo circulan y se replican las imágenes en red. Memestética, estéticas liminales, y la imagen como unidad de transmisión más que de representación.</p>
+          </div>
+          <div class="tema">
+            <span class="n">04</span>
+            <h3>Vigilancia y psicopolítica</h3>
+            <p>Capitalismo de vigilancia, sistemas de reconocimiento, y las formas contemporáneas de gobierno de la conducta a través de la infraestructura técnica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHARLAS ============ -->
+  <section id="charlas">
+    <div class="sec-grid">
+      <div class="sec-label">03 — Charlas</div>
+      <div>
+        <h2>Temas sobre los que hablo</h2>
+        <p class="lede">Doy charlas, keynotes y clases para universidades, centros culturales, festivales, empresas y organismos públicos. En español, presencial o remoto.</p>
+        <div class="stack">
+          <div class="item">
+            <span class="tag">Charla · 45–60 min</span>
+            <h3>Guerra cognitiva: cómo se disputa hoy lo que pensás</h3>
+            <p>Un recorrido desde los orígenes militares de internet hasta la propaganda automatizada contemporánea. Para públicos generales, con casos concretos y sin jerga técnica.</p>
+          </div>
+          <div class="item">
+            <span class="tag">Charla · 45–60 min</span>
+            <h3>La IA no piensa: percibe por vos</h3>
+            <p>Qué cambia en la percepción humana cuando delegamos la mirada en sistemas automáticos. Desde la psicología cognitiva hasta la imagen operativa.</p>
+          </div>
+          <div class="item">
+            <span class="tag">Charla o taller</span>
+            <h3>Arte e inteligencia artificial: qué se puede hacer</h3>
+            <p>Prácticas artísticas frente a los sistemas técnicos: apropiación, desvío, memética, estéticas liminales. Qué propone el arte para moverse en este mundo.</p>
+          </div>
+        </div>
+        <p style="margin-top:26px"><strong>Para invitarme:</strong> escribime a <a href="#contacto">mi correo</a> por consultas y disponibilidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CURSOS ============ -->
+  <section id="cursos">
+    <div class="sec-grid">
+      <div class="sec-label">04 — Cursos</div>
+      <div>
+        <h2>Formación</h2>
+
+        <div class="curso">
+          <h3>Diplomatura en IA aplicada al Arte Multimedial — UNA</h3>
+          <p>Co-dirijo esta diplomatura en el Departamento de Artes Multimediales de la Universidad Nacional de las Artes. Formación de posgrado sobre inteligencia artificial en la práctica artística contemporánea.</p>
+          <div class="meta">
+            <span><a href="https://multimedia.una.edu.ar/diplomaturas/diplomatura-en-inteligencia-artificial-aplicada-al-arte-multimedial_44987">Información e inscripción →</a></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PUBLICACIONES ============ -->
+  <section id="publicaciones">
+    <div class="sec-grid">
+      <div class="sec-label">05 — Publicaciones</div>
+      <div>
+        <h2>Escritos y entrevistas</h2>
+        <p class="lede">Selección. El listado completo de ponencias, exhibiciones y performances está disponible a pedido.</p>
+        <div class="stack">
+          <div class="item">
+            <span class="tag">Febrero 2026 · Ensayo</span>
+            <h3>La confesión tecnológica</h3>
+            <p>Una genealogía foucaultiana de la confesión: del derecho romano al confesionario, del consultorio psiquiátrico al feed, hasta el chat con una IA que escucha sin cuerpo y sin juicio. <a href="https://ishakim.substack.com/p/la-confesion-tecnologica">Leer →</a></p>
+          </div>
+          <div class="item">
+            <span class="tag">Entrevista · Teoría (Perfil)</span>
+            <h3>Gemelos digitales: ¿política pública o infraestructura de vigilancia?</h3>
+            <p>Debate con el abogado Jonathan Lifschitz sobre qué pasa cuando los datos dejan de describir a una población y empiezan a predecirla: Palantir y la tercerización de infraestructura estatal, psicografía, precios dinámicos y soberanía de datos. <a href="https://youtu.be/X2gv7zpIuiQ">Ver →</a></p>
+          </div>
+          <div class="item">
+            <span class="tag">Entrevista · Esto pasa en La Tribu</span>
+            <h3>¿Qué es el gemelo digital? Inteligencia artificial y soberanía</h3>
+            <p>Sobre el perfilado, la construcción algorítmica de un doble de cada persona y qué significa la soberanía tecnológica desde el sur. <a href="https://youtu.be/wCIP9ET9lUM">Ver →</a></p>
+          </div>
+          <div class="item">
+            <span class="tag">Entrevista · El Parque Stream</span>
+            <h3>¿Qué tienen que ver los memes con la guerra cognitiva?</h3>
+            <p>Conversación sobre memética, propaganda automatizada y la circulación de imágenes en red. <a href="https://youtu.be/g9-T25x1G6o">Ver →</a></p>
+          </div>
+          <div class="item">
+            <span class="tag">Textos</span>
+            <h3>Ensayos sobre guerra cognitiva, imagen y tecnología</h3>
+            <p>Escribo sobre los temas de mis cursos e investigaciones. <a href="https://ishakim.substack.com/">Leer y suscribirse →</a></p>
+          </div>
+          <div class="item">
+            <span class="tag">Perfil institucional</span>
+            <h3>Departamento de Artes Multimediales, UNA</h3>
+            <p>Ficha docente y actividad académica. <a href="https://multimedia.una.edu.ar/docentes/kim-isha_1362830">Ver ficha →</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="sec-grid">
+      <div class="sec-label">06 — Preguntas</div>
+      <div>
+        <h2>Preguntas frecuentes</h2>
+        <div class="faq">
+          <details open>
+            <summary>¿Qué es la guerra cognitiva?</summary>
+            <div><p>La guerra cognitiva es el uso deliberado de tecnologías de información y comunicación para alterar la percepción, las creencias y la conducta de una población, tratando a la mente humana como un dominio de operaciones militares junto con tierra, mar, aire, espacio y ciberespacio. A diferencia de la propaganda clásica, opera de forma distribuida y automatizada: bots, granjas de contenido, perfilado algorítmico y segmentación fina de audiencias.</p></div>
+          </details>
+          <details>
+            <summary>¿En qué se diferencia de la desinformación?</summary>
+            <div><p>La desinformación es una táctica; la guerra cognitiva es el marco que la contiene. La desinformación busca que creas algo falso. La guerra cognitiva busca algo más amplio: modificar cómo procesás información en general — a qué le prestás atención, en quién confiás, qué te agota, qué te parece discutible. Se puede hacer guerra cognitiva con información enteramente verdadera.</p></div>
+          </details>
+          <details>
+            <summary>¿Qué tiene que ver la psicología de la percepción con la inteligencia artificial?</summary>
+            <div><p>Todo, y casi nadie lo trabaja. Los sistemas de IA no sólo producen contenido: median lo que llega a nuestros sentidos y en qué orden. Entender sesgos perceptivos, atención selectiva y formación de creencias es lo que permite ver por qué ciertos diseños técnicos funcionan sobre las personas. Sin eso, la discusión sobre IA se queda en las capacidades del sistema y no llega a sus efectos.</p></div>
+          </details>
+          <details>
+            <summary>¿Isha Kim da charlas para empresas y organizaciones?</summary>
+            <div><p>Sí. Dicta charlas y clases sobre inteligencia artificial, guerra cognitiva y sus efectos sobre la percepción, para universidades, centros culturales, festivales, empresas y organismos públicos. En español, presenciales o remotas.</p></div>
+          </details>
+          <details>
+            <summary>¿Hay que saber de tecnología para hacer sus cursos?</summary>
+            <div><p>No. Los cursos están pensados para público mixto de arte, comunicación y tecnología, y no requieren conocimientos técnicos previos. Se trabaja con historia, teoría y casos, no con programación.</p></div>
+          </details>
+          <details>
+            <summary>¿En qué idiomas trabaja?</summary>
+            <div><p>Trabaja en español: sus clases, charlas y textos son en español.</p></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section id="contacto" class="contacto" style="border-bottom:0">
+    <div class="sec-grid">
+      <div class="sec-label">07 — Contacto</div>
+      <div>
+        <h2>Escribime</h2>
+        <p class="lede" style="margin-bottom:26px">Para invitaciones a hablar, clases, prensa o colaboraciones.</p>
+        <a class="mail" href="mailto:verdeazul@gmail.com">verdeazul@gmail.com</a>
+        <div class="perfiles">
+          <a href="https://ishakim.substack.com/">Substack</a>
+          <a href="https://www.linkedin.com/in/isha-kim-ia/">LinkedIn</a>
+          <a href="https://www.tiktok.com/@neurocookie">TikTok</a>
+          <a href="https://www.instagram.com/neurocookie/">Instagram</a>
+          <a href="https://www.youtube.com/@neurocookie">YouTube</a>
+          <a href="https://github.com/ishakim">GitHub</a>
+          <a href="https://multimedia.una.edu.ar/docentes/kim-isha_1362830">UNA</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Isha Kim</span>
+    <span>Actualizado: septiembre de 2026</span>
+  </footer>
+
+</main>
+
+<!-- ===================== DATOS ESTRUCTURADOS ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "dateModified": "2026-09-04",
+  "mainEntity": {
+    "@type": "Person",
+    "@id": "https://ishakim.github.io/#isha-kim",
+    "name": "Isha Kim",
+    "givenName": "Isha",
+    "familyName": "Kim",
+    "url": "https://ishakim.github.io/",
+    "description": "Psicóloga, investigadora, docente y artista argentina especializada en guerra cognitiva, percepción e inteligencia artificial.",
+    "jobTitle": ["Investigadora", "Docente universitaria", "Artista"],
+    "nationality": { "@type": "Country", "name": "Argentina" },
+    "knowsLanguage": ["es"],
+    "knowsAbout": [
+      "Guerra cognitiva",
+      "Propaganda automatizada",
+      "Inteligencia artificial",
+      "Psicología de la percepción",
+      "Arte multimedial",
+      "Cibernética",
+      "Memética",
+      "Imagen operativa",
+      "Capitalismo de vigilancia",
+      "Alfabetización digital"
+    ],
+    "worksFor": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidad Nacional de las Artes",
+      "alternateName": "UNA",
+      "url": "https://www.una.edu.ar/"
+    },
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Investigadora en inteligencia artificial y percepción",
+      "occupationLocation": { "@type": "City", "name": "Buenos Aires" }
+    },
+    "sameAs": [
+      "https://ishakim.substack.com/",
+      "https://www.linkedin.com/in/isha-kim-ia/",
+      "https://www.tiktok.com/@neurocookie",
+      "https://www.instagram.com/neurocookie/",
+      "https://www.instagram.com/eris_nyx_/",
+      "https://www.youtube.com/@neurocookie",
+      "https://www.youtube.com/channel/UC7Lta1e0Q-oI8tZGRg5spVQ",
+      "https://github.com/ishakim",
+      "https://multimedia.una.edu.ar/docentes/kim-isha_1362830"
+    ]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es la guerra cognitiva?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La guerra cognitiva es el uso deliberado de tecnologías de información y comunicación para alterar la percepción, las creencias y la conducta de una población, tratando a la mente humana como un dominio de operaciones militares junto con tierra, mar, aire, espacio y ciberespacio. A diferencia de la propaganda clásica, opera de forma distribuida y automatizada: bots, granjas de contenido, perfilado algorítmico y segmentación fina de audiencias." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué se diferencia la guerra cognitiva de la desinformación?",
+      "acceptedAnswer": { "@type": "Answer", "text": "La desinformación es una táctica; la guerra cognitiva es el marco que la contiene. La desinformación busca que creas algo falso. La guerra cognitiva busca modificar cómo procesás información en general: a qué le prestás atención, en quién confiás, qué te agota, qué te parece discutible. Se puede hacer guerra cognitiva con información enteramente verdadera." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué tiene que ver la psicología de la percepción con la inteligencia artificial?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Los sistemas de inteligencia artificial no sólo producen contenido: median lo que llega a nuestros sentidos y en qué orden. Entender sesgos perceptivos, atención selectiva y formación de creencias permite ver por qué ciertos diseños técnicos funcionan sobre las personas. Sin eso, la discusión sobre IA se queda en las capacidades del sistema y no llega a sus efectos." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Isha Kim da charlas para empresas y organizaciones?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Isha Kim dicta charlas y clases sobre inteligencia artificial, guerra cognitiva y sus efectos sobre la percepción, para universidades, centros culturales, festivales, empresas y organismos públicos. En español, presenciales o remotas." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Hay que saber de tecnología para hacer los cursos de Isha Kim?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Los cursos están pensados para público mixto de arte, comunicación y tecnología, y no requieren conocimientos técnicos previos. Se trabaja con historia, teoría y casos, no con programación." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué idiomas trabaja Isha Kim?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Isha Kim trabaja en español: sus clases, charlas y textos son en español." }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
