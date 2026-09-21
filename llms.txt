@@ -17,6 +17,12 @@ Disponible para charlas y clases.
 - [La confesión tecnológica](https://ishakim.substack.com/p/la-confesion-tecnologica) (febrero 2026): ensayo sobre la confesión como tecnología de poder, de Foucault y el derecho romano al confesionario cristiano, la psiquiatría, las redes sociales y las IA conversacionales. Introduce las nociones de "confesor algorítmico" y "recámaras de eco radicales".
 - [Ficha docente UNA](https://multimedia.una.edu.ar/docentes/kim-isha_1362830): perfil institucional.
 
+## Entrevistas
+
+- [Gemelos digitales: ¿política pública o infraestructura de vigilancia?](https://youtu.be/X2gv7zpIuiQ) — Teoría (Perfil). Debate con el abogado Jonathan Lifschitz sobre datos que predicen poblaciones en lugar de describirlas: Palantir y la tercerización de infraestructura estatal, excedente conductual y psicografía, precios dinámicos, redes federadas y soberanía de datos.
+- [¿Qué es el gemelo digital? Inteligencia artificial y soberanía](https://youtu.be/wCIP9ET9lUM) — Esto pasa en La Tribu. Perfilado algorítmico y soberanía tecnológica.
+- [¿Qué tienen que ver los memes con la guerra cognitiva?](https://youtu.be/g9-T25x1G6o) — El Parque Stream. Memética, propaganda automatizada y circulación de imágenes en red.
+
 ## Temas de especialización
 
 - Guerra cognitiva y propaganda automatizada: orígenes militares de internet, psyops, bots y granjas de contenido, perfilado y segmentación.
